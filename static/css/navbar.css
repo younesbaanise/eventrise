@@ -1,0 +1,742 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.88rem;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    width: 100%;
+    margin: 0 0px 0 0px;
+    background: #aaa999;
+    gap: 0.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+a{
+    color: darkblue;
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+
+}
+h2{
+    font-size: 1rem;
+
+}
+h3{
+    font-weight: 500;
+    font-size: 0.80rem;
+    margin-left: 1rem;
+    margin-right: 9rem;
+}
+h4{
+    font-size:0.8rem;
+}
+h5{
+    font-size:0.7rem;
+}
+
+small{
+    font-size:0.75rem;
+}
+
+
+
+
+
+aside  .sidebar{
+    display: flex;
+    background: #062dc1;
+    flex-direction: column;
+    height: 100%;
+    width: 18.6vw;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    border-radius: 0px 45px 45px 0 ;
+
+}
+
+
+aside .top{
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+aside .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+aside .logo img{
+    width: 0rem;
+    height: 0rem;
+}
+aside .close{
+    display: none;
+}
+ /* .......... */
+
+aside .sidebar a{
+    display: flex;
+    color: #fff;
+    gap: .2rem;
+    align-items: center;
+    position: relative;
+    top: 82px;
+    transition: all 300ms ease;
+    font-weight: 500;
+    margin-top: 25px;
+    margin-left: .4rem;
+    width: 85%;
+    height: 39px;
+    box-shadow: 0 0.2rem 2rem 0 #aaaa;
+    border-radius:0 20px 20px 0;
+}
+aside .sidebar a h3{
+    font-size: 1.2rem;
+    width: 100vw;
+}
+
+
+aside .sidebar a span{
+    font-size: 2.8rem;    
+    margin-left: .2rem;
+}
+aside .sidebar a:first-child{
+    margin-left: .5rem;
+    background: #111;
+    font-size: 9rem;
+    font-weight: bolder;
+    box-shadow: 0 0.2rem 2rem 0 #aaa;
+    border-radius:0 20px 20px 0;
+    width: 86%;
+    height: 40px;
+}
+aside .sidebar a:hover{
+    color: #062dc1;
+    background: #fff;
+    margin-left: 1.7rem;
+    border-radius:0px 20px 20px 0px;
+    box-shadow: 0 0.2rem 2rem 0 #111;
+}
+aside .sidebar a:last-child{
+    position: relative;
+    top: 16rem;
+}
+
+aside .sidebar a:first-child:hover{
+    border-radius:0px 20px 20px 0px;
+}
+aside .sidebar a:last-child:hover{
+    border-radius:0 20px 20px 0px;
+
+}
+
+aside .sidebar a.active{
+    background: lightblue;
+    color: #fff;
+    margin-left: 0;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active span{
+    margin-left: 0;
+    transition: all 300ms ease;
+}
+/* side bar */
+
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  min-height: 100%;
+  background: #e3f2fd;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  color: #4070f4;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+}
+.logo img{
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+  gap: 0.8rem;
+}
+.logo .menu-icon {
+  /* color: #4070f4; */
+  font-size: 24px;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.logo .logo-name {
+  color: #333;
+  font-size: 22px;
+  font-weight: 500;
+}
+nav .sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 260px;
+  padding: 20px 0;
+  background-color: #4070f4;
+  
+  /* color: #4070f4; */
+  color: #fff;
+  box-shadow: 0 5px 1px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+nav.open .sidebar {
+  left: 0;
+}
+.sidebar .sidebar-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+.sidebar-content .list {
+  list-style: none;
+}
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+
+  color: #fff;
+}
+.lists .nav-link:hover {
+
+  background-color: #fff;
+  
+  color: #062dc1;
+  background: #fff;
+  margin-left: 1.3rem;
+  border-radius:0px 20px 20px 0px;
+  box-shadow: 0 0.2rem 2rem 0 #111;
+}
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+}
+.nav-link .link {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+}
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #4070f4; 
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 1000vh;
+  width: 200%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.3);
+}
+nav.open ~ .overlay {
+  opacity: 1;
+  left: 260px;
+  pointer-events: auto;
+}
+
+
+
+
+/* end of sidebar */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    margin-bottom: 1.2rem;
+}
+main .date{
+    display: inline-block;
+    background: #bbb;
+    border-radius:20px transparent;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+    border-radius: 20px;
+}
+main .date input[type="date"]{
+    background: transparent;
+    color: #111;
+}
+main h1{
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    color: #062dc1;
+    position: relative;
+    top: .10rem;
+}
+
+main .top{
+    position: relative;
+    bottom: 1.5rem;
+    display: flex;
+    margin-left: 2rem;
+    width: 56vw;
+    height: 18vh;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 .2rem 2rem 0 #111 ;
+}
+main .top h2{
+    margin-bottom: .5rem;
+    margin-left: .5rem;
+    align-self:end;
+    color: #062dc1;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+main .top img{
+    width: 5.3vw;
+    position: relative;
+    left: 38rem;
+}
+.cont-insights{
+    display: flex;
+    margin-left: 2rem;
+}
+
+main .insights{
+    width: 30pvw;
+    display: flex;
+}
+
+
+
+main .insights .newUser{
+    display: flex;
+    background-color: #fff;
+    width: 20vw;
+    height: 20vh;
+    box-shadow: .1rem .1rem .7rem .1rem #111 ;
+    margin-left: 1.5rem;
+    margin-right: 10rem;
+    border-radius: 20px;
+    position: relative;
+    bottom: 1.2rem;
+}
+
+main .insights .newUser h2{
+    display: flex;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 11rem;
+}
+main .insights span{
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+main .insights .newUser .inside{
+    display: flex;
+    position: relative;
+    right: 17rem;
+    top: 6rem;
+    width: 10rem;
+    height: 4.5rem;
+    border-radius:  2rem   2rem 0 0;
+} 
+main .down .head .btn a{
+    color: #111;
+    font-size: .8rem;
+    
+} 
+
+main .down .head .btn :hover{
+    color: #fff;
+}
+main .down .head .btn{
+    margin-top: .9rem;
+    margin-left: 11rem;
+    border: 2px solid #bbb;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #111;
+}
+main .down .head .btn :hover{
+    background: #062dc1;
+}
+
+
+main .down .head{
+    display: flex;
+    
+}
+main .down .head h1{
+    margin-top: .4rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+main .down .head button{
+    width: 8vw;
+    height: 3rem;
+    background: transparent;
+}
+
+main .down{
+    margin-top: -.85rem;
+    margin-left: 2rem;
+    width: 56vw;
+    height: 24.36rem;
+    background: #fff;
+    box-shadow: .1rem .1rem 1rem 0 #111 ;
+    border-radius: 20px;
+}
+
+.card img{
+    margin-top: .5rem;
+    margin-left: .6rem;
+    border-radius: 20px 20px 0 0;
+    width: 14.8vw;
+    height: 20vh;
+}
+.bottom {
+    position: absolute;
+    top: 20rem;
+    border-radius: 20px 20px 0 0;
+    width: 15.2vw;
+    height: 26vh;
+}
+.bottom img{
+    width: 14.8vw;
+    height: 20vh;
+    position: relative;
+    top: 16rem;
+}
+.card {    
+    margin-top: .6rem;
+    display: flex;
+    border-radius: 20px 20px ;
+    width: 56vw;
+    height: 20.4rem;
+    background: #062dc1;
+    overflow: hidden;
+}
+
+
+
+
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 0 0;
+}
+.slide-content{
+    margin: 10px 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 15rem;
+}
+.card{
+    border-radius: 25px;
+    background-color: #FFF;
+    
+}
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 12rem;
+    width: 18rem;
+    border-radius: 25px 25px 0 0px;
+    background-image: url(./images/marriage1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay::before,
+.overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4070F4;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+.card-image{
+    position: relative;
+    top: 4.1rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 0 0px;
+    background: #062dc1;
+    padding: 3.2rem .5rem;
+    
+    
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    border-radius: 50%;
+    background: #6E93f7;
+    border: 4px solid #4070F4;
+}
+.name{
+    position: relative;
+    bottom: 4.5rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+.icons-down{
+    display: flex;
+    position: relative;
+    bottom: 2.4rem;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+p{  
+    font-size: .7rem;
+    color: #fff;
+    text-align:right;
+}
+
+h4{
+    margin-left: 3rem;
+    padding: 0 0.1rem 0rem 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: right;
+    color: #062dc1;
+    background: #fff;
+    border-radius: 25px;
+}
+
+.right-side .top button{
+    background: none;
+    color: rgba(34, 63, 152, 1);
+    margin-top: 4px;
+    margin-left: 100px;
+}
+.right-side .top span{
+font-size:35px;
+    margin-right: 0px;
+}
+
+.middle {
+    padding-left: 50px;
+    width: 270px;
+    position: relative;
+    right:  100px;
+    background: #fff;
+    border-radius: 10px;
+}
+.middle img{
+    width: 120px;
+}
+.middle h2{
+    font-size: 16px;
+    margin-left: 20px;
+}
+.middle h3{
+text-align: justify;
+font-size: 12px;
+position: relative;
+right:  20px;
+bottom: 3px;
+}
+.middle span{
+    font-weight: bold;
+}
+.deep-down{
+        padding-left: 40px;
+        margin-bottom: 10px;
+        width: 270px;
+        position: relative;
+        right: 100px;
+        background: #fff;
+        border-radius: 10px;
+        height: 200px;
+    
+}
+.deep-down .up {
+    display: flex;
+    margin-top: 8px;
+    position: relative;
+    right: 35px;
+    top: 5px;
+}
+.date button{
+    
+    background: transparent;
+}
+
+.date button:hover{
+    background: #062dc1;
+}
+.deep-down .up .date{
+    margin-left: 25px;
+    display: flex;
+    border-radius:5px 5px;
+    border: 2px solid #bbb;
+    background: transparent;
+    
+}
+.deep-down .up  a{
+    background: none;
+    padding: 2px ;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 30px;
+    overflow: hidden;
+    color: #111;
+    background: transparent;
+}
+hr{
+    margin-top: 12px;
+    position: relative;
+    right: 35px;
+    width: 260px;
+    height: 2px;
+    border-radius: 50%;
+    background: #062dc1;
+}
+.hr{
+    margin-top: 12px;
+    position: relative;
+    right: 70px;
+    width: 260px;
+    height: 2px;
+    border-radius: 50%;
+    background: #062dc1;
+}
+.deep-down img{
+    margin: 0;
+    margin-right: 50px;
+    width: 60px;
+    position: relative;
+    margin-left:7px;
+}
+.userName{
+    display: flex;
+    margin-top: 0x;
+    position: relative;
+    right: 45px;
+    
+}
+
+.userName h2{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.right-down{
+    position: relative;
+    right: 25px;
+    bottom: 0px;
+}
+.Begining{
+    position: relative;
+    left:  60px;
+}
+.deadline{
+    position: relative;
+    left:  60px;
+    bottom: 60px;
+}
+.Begining h3{
+    position: relative;
+    bottom: 25px;
+    left: 10px;
+    font-size: 9px;
+}
+.deadline h3{
+    position: relative;
+    bottom: 25px;
+    left: 10px;
+    font-size: 9px;
+}
+
+.cont-addEvent{
+    display: flex;
+}
+.form-group{
+    background: #4070F4;
+    /* float: left; */
+}

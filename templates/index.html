@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css')}}">
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+</head>
+<body>
+    <div class="home" id="home">
+        <header>
+            <img src=" {{ url_for('static', filename='images/logo.png')}}" class="logo" alt="logo">
+            <nav class="navigation">
+                <a href=" {{ url_for('login')}}">Login</a>
+                <a class="btnLogin-popup"  href=" {{ url_for('register')}}"> Register</a>
+            </nav>
+        </header> 
+            <h1>All-in-One Event Management Software</h1>
+            <p>Our Event Management Platform Automates and Simplifies the entire Event Management Process.</p>
+            <a class="center" href=" {{ url_for('register')}} ">Create your event</a>
+    </div>
+    <div class="pop">
+        <img   class="leftPop" src=" {{ url_for('static', filename='images/leftpop.png')}}" alt="leftPop">
+        <img class="rightPop" src=" {{ url_for('static', filename='images/leftpop.png')}}" alt="rightPop">
+    </div>
+    <div class="cont-events">
+        <div class="events">
+            <img src="{{ url_for('static', filename='images/marriage.jpg')}}" alt="marriage">
+            <img src="{{ url_for('static', filename='images/birthday1.jpg')}}" alt="birthday">
+            <img src="{{ url_for('static', filename='images/friend-party2.jpg')}}" alt="friend-party">
+        </div>
+        <p class="help">We help you to rise your event</p>
+    </div>
+        <div class="service-description">
+            <img src="{{ url_for('static', filename='images/left.png')}}" alt="friends">
+            <p> Our <span class="Event">Event  Management Platform </span>Automates and Simplifies the entire <br> Event Management  Process</p>
+        </div>
+    <div class="cont-cards">
+        <div class="cont-cards1">
+            <div class="ui-card">
+                <img src="{{ url_for('static', filename='images/one.png')}}" alt="one">
+                <div class="description">
+                    <h3>Mountain Morning</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="ui-card">
+                <img src="{{ url_for('static', filename='images/four1.png')}}" alt="four1">
+                <div class="description">
+                    <h3>Mountain Morning</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>        
+        </div>
+        <div class="cont-cards2">
+            <div class="ui-card">
+                <img src="{{ url_for('static', filename='images/four1.png')}}" alt="four1">
+                <div class="description">
+                    <h3>Mountain Morning</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>        
+            <div class="ui-card">
+                <img src="{{ url_for('static', filename='images/four1.png')}}" alt="four1">
+                <div class="description">
+                    <h3>Mountain Morning</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>        
+        </div>
+        
+
+
+
+    </div>
+            <footer>
+                
+        <div class="footer">    
+    
+                <div class="left-side">
+                    <img src="{{ url_for('static', filename='images/logo.png')}}" alt="logo">
+                    <a class="btn" href=" {{ url_for('register')}} ">Create your event</a>
+                    <div class="reserve">
+                        <h2>Reserve your event here</h2>
+                    </div>
+                </div>
+                    <div class="left">           
+                        <h2>guide</h2>
+                        <ul>          
+                        <li><a href="#home"><i class="fa fa-home"></i>home</a></li>
+                        <li><a href=" {{ url_for('about_us')}} "><i class="fa fa-info"></i>about us</a></li>
+                        <li><a><i class="fa fa-question-circle"></i>contact us</a></li>
+                        </ul>
+                    </div>
+        
+                <div class="right">
+                        <h2>Follow us</h2>
+                        <a href="https://fr-fr.facebook.com/"><i class="fa fa-facebook"></i>facebook </a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i>instagram </a>
+                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i>linkedin </a>
+                </div>
+            </div>
+            <p class="copyright"> &copy; Copyright All rights reserved. </p>
+        
+        
+            </footer>      
+</body>
+</html>

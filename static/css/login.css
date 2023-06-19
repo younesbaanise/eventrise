@@ -1,0 +1,116 @@
+
+/* login  style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo{    
+    width: 150px;
+    margin-left: 40px;
+    position: relative;
+    top: 380px;
+}
+
+.home{
+    background-image: url("/static/images/up.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:856px;
+    width: 1481px;
+    position: relative;
+    /* top: 0;   */
+    bottom:361px;
+}
+
+.wrapper{
+    position: relative;
+    left: 500px;
+    top: 500px;
+    z-index: 6;
+    width: 330px;
+    height: 435px;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    backdrop-filter: blur(20px)  ;
+    background: #fffffba6;
+    box-shadow: 0 5px 10px #070707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: transform .5s ease , height .2s ease ;
+    overflow: hidden;
+}
+.wrapper .wrapper.active-popup{
+    transform: scale(1);
+}.wrapper.active{
+    height: 432px;
+}
+.form-box-login h2{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    height:50px;
+    border-bottom: 1px solid #bbb;
+    margin: 30px 0;
+}
+.input-box input:focus~label,
+.input-box input:focus~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #bbb;
+    line-height: 57px;
+}
+
+.btn  {
+    width: 100%;
+    background: #062dc1;
+    border-radius: 20px;
+}
+#submit {
+    
+    background: #062dc1;
+    font-size: 1.2em;
+    color: #fff;
+    border: none;
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    z-index: 9;
+}
+.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    z-index: 9;
+}

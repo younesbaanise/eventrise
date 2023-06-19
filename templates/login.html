@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- BOOTSTRAP Icons link -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css')}}">
+    <script src="{{ url_for('static', filename='js/login.js')}}"></script>
+    <title>Login</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category_name, message in messages %}
+            {% if category_name == 'success' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% elif category_name == 'error' %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endwith %}
+
+    <div class="home">
+        <img   class="logo" src=" {{ url_for('static', filename='images/logo.png')}}" alt="logo">
+
+
+    <div class="wrapper ">
+        
+        <div class="form-box-login">
+
+                <h2>Login</h2>
+
+                <form action="{{ url_for('login') }}" method="post">
+
+                    {{ form.hidden_tag() }}
+                    <div class="input-box">
+                        <i class='bx bxs-envelope icon'></i>
+                        {{ form.email }}
+                    </div>
+                    
+                    <div class="input-box">
+                        <i class='bx bxs-lock-alt icon' ></i>
+                        {{ form.password }}
+                    </div>
+                    
+                    <div class="btn">
+                    {{ form.submit }}
+                    </div>
+
+                </form>
+                <a href="{{ url_for('register') }}">Don't have an account? Register</a>
+                
+        </div>
+    </div>
+
+    <!-- bootstrap js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

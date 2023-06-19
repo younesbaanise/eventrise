@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/about_us.css')}}">
+    <title>About Us</title>
+</head>
+<body>
+<div class="about-section">
+<h1>About Us</h1>
+<p>Our team is happy to create a platform to help others manage their event by them selfs.</p>
+<p>Resize the browser window to see that this page is responsive by the way.</p>
+</div>
+<h2 style="text-align:center">Our Team</h2>
+    <div class="cont">
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/Younes.png')}}" alt="Younes" style="width:100%">
+                    <div class="container">
+                    <h2>Younes</h2>
+                    <p class="title">Back-end develpoer</p>
+                    <p>Junior Back-end developer Passionate about Back-end stuff.</p>
+                    <p>You-ness@gmail.com</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+            <div class="column">
+                <div class="card">
+                    <img  src="{{ url_for('static', filename='images/brahim.jpg')}}" alt="Brahim" style="width:100%">
+                        <div class="container">
+                                <h2>Brahim</h2>
+                                <p class="title">Front-end develpoer</p>
+                                <p>Junior front-end developer Passionate about front-end stuff.</p>
+                                <p>Bazzaf21@gmail.com</p>
+                                <p><button class="button">Contact</button></p>
+                        </div>
+                </div>
+            </div>
+        
+            <div class="column">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/Mohamed.png')}}" alt="Mohamed" style="width:100%">
+                        <div class="container">
+                            <h2>Mohamed</h2>
+                            <p class="title">Front-end develpoer</p>
+                            <p>Junior front-end developer Passionate about front-end stuff.</p>
+                            <p>Moha3med@gmail.com</p>
+                            <p><button class="button">Contact</button></p>
+                        </div>
+                </div>
+            </div>
+    
+            <div class="column">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/wissam.png')}}" alt="Wissam" style="width:100%">
+                            <div class="container">
+                                <h2>Wissam</h2>
+                                <p class="title">Designer</p>
+                                <p>Junior Designer Passionate about Design stuff.</p>
+                                <p>wis-sam@gmail.com</p>
+                                <p><button class="button">Contact</button></p>
+                            </div>
+                    </div>
+                </div>
+        
+</div>
+</body>
+</html>

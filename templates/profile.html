@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category_name, message in messages %}
+                {% if category_name == 'success' %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% elif category_name == 'error' %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('profile') }}" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="">
+                {{ form.Fname }}
+            </div>
+            <div class="">
+                {{ form.email }}
+            </div>
+            <div class="">
+                {{ form.password }}
+            </div>
+            <div class="">
+                <strong>Change your profile pic:</strong> {{ form.profile_pic }}
+            </div>
+            <div class="">
+                {{ form.submit }}
+            </div>
+        </form>
+        
+
+    </body>
+    </html>
+{% endblock %}

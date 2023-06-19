@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div id="calendar"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                start: 'dayGridMonth,timeGridWeek,timeGridDay',
+                center: 'title',
+                end: 'prevYear,prev,next,nextYear'
+            },
+            events: [
+                {% for post in posts %}
+                {
+                    title: '{{ post.title }}',
+                    start: '{{ post.start_date }}T{{ post.start_time }}',
+                    end: '{{ post.end_date }}T{{ post.end_time }}',
+                    extendedProps: {
+                        type: '{{ post.event_type }}',
+                        location: '{{ post.location }}',
+                        creator: '{{ post.poster.Fname }}',
+                        start_date: '{{ post.start_date }}',
+                        start_time: '{{ post.start_time }}',
+                        end_date: '{{ post.end_date }}',
+                        end_time: '{{ post.end_time }}'
+                    }
+                },
+                {% endfor %}
+            ],
+            eventClick: function(info) {
+                info.jsEvent.preventDefault();
+                var event = info.event;
+                var content = '<h5>' + event.title + '</h5>' +
+                                '<p>Type: ' + event.extendedProps.type + '</p>' +
+                                '<p>Location: ' + event.extendedProps.location + '</p>' +
+                                '<p>Creator: ' + event.extendedProps.creator + '</p>' +
+                                '<p>Start date: ' + event.extendedProps.start_date + '</p>' +
+                                '<p>Start time: ' + event.extendedProps.start_time + '</p>' +
+                                '<p>End date: ' + event.extendedProps.end_date + '</p>' +
+                                '<p>End time: ' + event.extendedProps.end_time + '</p>';
+
+                var popover = new bootstrap.Popover(info.el, {
+                    container: 'body',
+                    placement: 'auto',
+                    html: true,
+                    content: content
+                });
+
+                popover.show();
+
+                // Close popover when clicking anywhere on the document
+                document.addEventListener('click', function(event) {
+                    if (!popover._element.contains(event.target)) {
+                        popover.dispose();
+                    }
+                });
+            }
+        });
+
+        calendar.render();
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <h1>Create event</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+
+        {{ form.title.label }} {{ form.title }} <br>
+        {{ form.event_type.label }} {{ form.event_type }} <br>
+        {{ form.start_date.label }} {{ form.start_date }} <br>
+        {{ form.end_date.label }} {{ form.end_date }} <br>
+        {{ form.start_time.label }} {{ form.start_time }} <br>
+        {{ form.end_time.label }} {{ form.end_time }} <br>
+        {{ form.location.label }} {{ form.location }} <br>
+        {{ form.max_guests.label }} {{ form.max_guests }} <br>
+    
+        {{ form.description.label }} {{ form.description(rows="7") }} <br>
+        
+        {% if post.image_filename %}
+            <img src="{{ url_for('static', filename='images/' + post.image_filename) }}" width="200">
+        {% endif %}
+        {{ form.image.label }} {{ form.image }} <br> <br>
+        {{ form.submit }}
+    </form>
+    
+
+{% endblock %}

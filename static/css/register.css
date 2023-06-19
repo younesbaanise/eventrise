@@ -1,0 +1,159 @@
+/* Registration  style */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.logo{    
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 40px;
+    position: relative;
+    top: 380px;
+}
+
+.home{
+    background-image: url("/static/images/up.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:856px;
+    width: 1481px;
+    position: relative;
+    /* top: 0;   */
+    bottom:361px;
+}
+
+
+.wrapper{
+    position: relative;
+    left: 500px;
+    top: 500px;
+    z-index: 6;
+    width: 330px;
+    height: 435px;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    backdrop-filter: blur(20px)  ;
+    background: #fffffba6;
+    box-shadow: 0 5px 10px #070707;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: transform .5s ease , height .2s ease ;
+    overflow: hidden;
+}
+.wrapper .wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 432px;
+}
+
+
+
+.wrapper .form-box-register{
+    width: 100%;
+    padding: 40px;
+}
+
+
+
+
+
+.form-box-register h2{
+    font-size: 40px;
+    font-weight: 600;
+    /* text-align: center; */
+}
+
+.icon{
+    position: relative;
+    right: 18px;
+    font-size: 1.2em;
+    color: #bbb;
+    line-height: 57px;
+}
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    margin-bottom: 10px;
+}
+#submit {
+    width: 100%;
+    height: 45px;
+    background: #062dc1;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    margin-top: 10px;
+}
+
+
+.form-box-register h2{
+    color: #111;
+}
+a{
+    position: relative;
+    color: #bbb;
+    text-decoration: underline;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+
+.input-box #Fname{
+    position: relative;
+    height:50px;
+    width: 100px;
+    border-bottom: 2px solid #bbb;
+    margin: 30px 0;
+}
+input {
+    border: none;
+    position: relative;
+    height: 50px;
+    border-bottom: 2px solid #bbb;
+    margin: 10px 0;
+    background: transparent;
+    width: 221px;
+
+}
+
+.alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    z-index: 9;
+}
+.alert-success {
+    color: #0f5132;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    z-index: 9;
+}
